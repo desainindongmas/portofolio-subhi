@@ -1,0 +1,7 @@
+Claude, OpenAI, Gemini: @lobehub/icons-static-svg (jsDelivr).
+Canva, Adobe Photoshop, Adobe Lightroom, Adobe Premiere Pro: Simple Icons 11.15.0 (jsDelivr).
+CapCut: glincker/thesvg, public/icons/capcut/default.svg (jsDelivr).
+Product marks identify their respective products. Skill ratings and descriptions were supplied by the portfolio owner.
+
+GitHub, Supabase, Netlify, Vercel, Cloudflare, Firebase, Instagram, TikTok, Facebook, WhatsApp and Meta: simple-icons/simple-icons, canonical SVG paths (develop), retrieved 2026-11-07. Brand colors retained. Meta Business Suite and Meta Ads use the Meta brand mark.
+Google Flow: original application icon from https://www.gstatic.com/aitestkitchen/website/flow/favicon/flow_icon_192.png (linked by https://flow.google.com/), retrieved 2026-11-07.

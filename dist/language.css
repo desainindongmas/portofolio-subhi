@@ -1,0 +1,8 @@
+.language-switch{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:30px;padding:3px;gap:2px;flex-shrink:0}
+.settings .language-switch button{font-size:10px;font-weight:600;letter-spacing:.5px;min-width:34px;min-height:30px;border:0;padding:6px 8px;background:transparent;border-radius:20px;color:var(--muted)}
+.settings .language-switch button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+body:has(.menu:not([hidden])) .language-switch{border-color:#ffffff30}
+body:has(.menu:not([hidden])) .settings .language-switch button{background:transparent;color:#b9c8c8}
+body:has(.menu:not([hidden])) .settings .language-switch button[aria-pressed=true]{background:#f0d49c;color:#182838}
+.settings .language-switch button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+@media(max-width:760px){.settings{gap:5px}.settings .language-switch button{min-width:28px;min-height:28px;padding:5px 6px;font-size:9px}.language-switch{padding:2px}.wordmark{font-size:8px;letter-spacing:.7px}.settings>button{padding:7px 8px}.profile-kicker{gap:8px}.profile-actions{min-width:0}}

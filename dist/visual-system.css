@@ -1,0 +1,73 @@
+/* Shared personal identity and cinematic interface. Project logos and character art stay unchanged. */
+:root{--radius-panel:12px;--radius-control:6px;--text-body:14px;--text-label:10px;--muted:#536872;--panel-solid:#fffaf0;--focus-ring:#926219}
+html[data-theme=dark]{--muted:#b9c8cd;--panel-solid:#213542;--focus-ring:#e5bc71}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+button,a{touch-action:manipulation}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--focus-ring);outline-offset:4px}
+header{max-width:none;height:84px;padding:18px 5%;gap:18px;background:var(--paper)}
+header .wordmark{display:inline-flex;align-items:center;gap:11px;text-decoration:none;letter-spacing:0;min-width:0;flex-shrink:0}
+header .wordmark .personal-monogram{display:grid;place-items:center;width:39px;height:39px;border:1px solid var(--accent);border-radius:9px;font:21px/1 Georgia,serif;letter-spacing:-1.4px;color:var(--ink);background:var(--panel)}
+header .wordmark .personal-lockup{display:flex;flex-direction:column;gap:3px;color:var(--ink)}
+.personal-lockup b{font-size:14px;font-weight:600;letter-spacing:-.3px;line-height:1.2}
+.personal-lockup small{font-size:8px;letter-spacing:1.9px;line-height:1.2;color:var(--muted)}
+body:has(.menu:not([hidden])) .wordmark .personal-lockup,body:has(.menu:not([hidden])) .wordmark .personal-monogram{color:#f4eee2}
+body:has(.menu:not([hidden])) .wordmark .personal-monogram{border-color:#d9b77599;background:#ffffff07}
+body:has(.menu:not([hidden])) .personal-lockup small{color:#b9c8c8}
+.settings{align-items:center;gap:8px}.settings>button{min-height:40px;border-radius:var(--radius-control);font-size:11px;padding:9px 12px}
+.settings .language-switch{border-radius:8px;padding:3px}.settings .language-switch button{border-radius:5px;min-height:32px}
+.screenhead{max-width:1220px;margin:0 auto;gap:20px;padding-top:28px;padding-bottom:24px;align-items:center}
+.screenhead h1{font:400 clamp(28px,3.2vw,42px)/1.2 Georgia,serif;letter-spacing:-1px;margin:0;color:var(--ink)}
+.screenhead .back{font-size:11px;letter-spacing:.6px;min-height:44px}
+.quicknav{gap:6px}.quicknav button{min-height:40px;padding:10px 13px;font-size:11px;border-radius:var(--radius-control);border:1px solid var(--line);background:var(--panel);line-height:1.3}
+.quicknav button.current{background:color-mix(in srgb,var(--gold) 9%,var(--panel));border-color:var(--accent)}
+.eyebrow{font-size:var(--text-label);letter-spacing:1.8px;font-weight:600;line-height:1.5}
+.pagefoot{font-size:10px;letter-spacing:1px;gap:20px;padding:22px 0;margin-top:10px}
+/* Menu: same personal signature and clearly visible primary actions. */
+.menu .gametitle{font-family:Georgia,serif;font-weight:400;font-size:clamp(62px,7.2vw,106px);letter-spacing:-4px;line-height:.98;margin:16px 0 22px}
+.menu .title-lockup .eyebrow{font-size:10px;letter-spacing:2px}
+.menu .work-descriptor{font-size:11px;line-height:1.7;letter-spacing:.65px;gap:6px 12px;max-width:480px;margin-bottom:0;color:#c8d7d4}
+.menu-direct-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.menu-direct-actions a{min-height:46px;min-width:165px;padding:13px 16px;font-size:12px;border-radius:var(--radius-control)}
+.menu-direct-actions .profile-primary{background:#e5bc71;border-color:#e5bc71;color:#172b3b}
+.menu-direct-actions .profile-secondary{color:#f3eee4;background:#183448a8;border-color:#bccfca55}
+.menu-direct-actions .profile-secondary:hover{background:#25495b;border-color:#e5bc71;color:#fff3dc}
+.menu .title-menu{gap:18px;padding-top:30px;padding-bottom:30px}
+.menu .game-controls{min-height:174px}.menu #game-menu{gap:4px}
+.menu #game-menu button{font-size:23px;border-radius:var(--radius-control);border-left:2px solid transparent;min-height:44px;padding:7px 16px 7px 22px}
+.menu #game-menu button:hover,.menu #game-menu button:focus{background:#ffffff09;border-left-color:#e5bc71;transform:translateX(4px)}
+.menu #game-menu button span{font-size:10px;color:#d3bd8c}.menu #game-menu small{font-size:9px;color:#b9c8c8;letter-spacing:.5px;margin-top:14px}
+.menu .press-start{font-size:13px;letter-spacing:1px}.menu .press-start span{font-size:11px;color:#bdcdcb}
+.menu .menu-footer{font-size:9px;letter-spacing:1.3px}
+/* Character information uses the same panel and control system as the gallery. */
+[data-screen=profil] .profilegrid{max-width:1160px;gap:36px;margin:34px auto 48px;align-items:start;grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr)}
+.profile-character-stage{height:670px;border-radius:var(--radius-panel);border-color:#8caba94d;background:radial-gradient(ellipse at 50% 40%,#244b59,#122a3c 55%,#101d2e);box-shadow:0 16px 45px #0a1d2d14}
+.profile-stage-label{font-size:11px;letter-spacing:2.2px;top:27px}.profile-stage-caption span,.profile-stage-caption small{font-size:9px;letter-spacing:1.5px}.profile-stage-caption b{font:400 29px/1.2 Georgia,serif;margin:9px 0}
+.profiletext{border:1px solid var(--line);border-radius:var(--radius-panel);padding:26px;background:var(--panel);min-width:0}
+.profiletext:before{display:none}.profile-kicker{gap:10px;padding-top:0;flex-wrap:wrap}.profile-kicker .eyebrow{font-size:10px;letter-spacing:1.4px}.character-status{font-size:10px;padding:7px 10px;color:var(--ink)}
+.profiletext h2{font:400 clamp(36px,4vw,52px)/1.1 Georgia,serif;letter-spacing:-1.8px;margin:23px 0 12px}
+.character-class{font-size:12px;letter-spacing:.5px;line-height:1.7;color:var(--accent)}
+.character-tabs{gap:6px;margin-top:22px}.character-tabs button{font-size:12px;padding:12px;min-height:44px}.character-tabs button[aria-selected=true]{color:var(--ink);font-weight:600}
+.character-panels{min-height:0;margin-bottom:20px}.profiletext .character-bio{font-size:14px;line-height:1.85;margin:20px 0;color:var(--muted)}
+.profilefacts{padding:19px 0;margin:20px 0 0;gap:15px 20px}.profilefacts small{font-size:10px;letter-spacing:1px}.profilefacts p{font-size:12px;line-height:1.7}
+.character-tabpanel>p,.character-education p{font-size:14px;line-height:1.85}.character-education small{font-size:10px;letter-spacing:1px}.character-tabpanel h3{font:400 24px/1.3 Georgia,serif}
+.skills-shortcut{padding:15px 16px;border-radius:var(--radius-control);gap:13px;min-height:68px}.skills-shortcut>div{font-size:14px}.skills-shortcut small{font-size:11px;line-height:1.5}
+.profile-actions{grid-template-columns:1fr 1fr;gap:9px;margin-top:19px}.profile-actions .profile-primary{grid-column:1/-1}
+.profile-primary,.profile-secondary{min-height:46px;font-size:12px;padding:13px 15px;border-radius:var(--radius-control)}
+.cv-hint{font-size:11px!important;line-height:1.7}.profiletext .cv-hint{margin-bottom:0}
+/* Skill tree: preserve nodes and connections, improve their scale and hierarchy. */
+.skill-tree-section{margin:34px auto;max-width:1160px}.tree-intro h2{font:400 clamp(29px,3vw,38px)/1.2 Georgia,serif;letter-spacing:-1px;margin:12px 0}.tree-intro p{font-size:14px;line-height:1.8}
+.tree-badge{font-size:10px;letter-spacing:1px;border-radius:var(--radius-control);padding:10px 13px}.tree-disclaimer{font-size:12px;line-height:1.8;padding-left:14px;margin:14px 0 26px}
+.tree-board{border-radius:var(--radius-panel);padding:32px;background:radial-gradient(ellipse at 50% 0%,#6d9a9b10,transparent 65%),var(--panel)}
+.tree-root{font-size:16px;border-radius:var(--radius-control);padding:15px 23px}.tree-root>span{display:grid;place-items:center;width:44px;height:44px;border-radius:9px;font-size:23px;letter-spacing:-1.5px}.tree-root small{font-size:9px;letter-spacing:1px;line-height:1.6}
+.branch-title{border-radius:var(--radius-control);padding:15px 12px}.branch-title>span{font-size:10px;letter-spacing:1.5px}.branch-title h3{font:400 23px/1.3 Georgia,serif;margin:7px 0}.branch-title small{font-size:10px;letter-spacing:1px}
+.node-name{font-size:13px;line-height:1.4}.node-caption{font-size:9px;letter-spacing:.8px}.skill-node{padding:9px 15px;gap:11px}.tree-legend{font-size:12px;line-height:1.7;gap:20px;padding:18px 2px}.journey-details>summary{font-size:14px;min-height:52px}.journal{border-radius:var(--radius-panel);padding:26px}.journal p{font-size:14px;line-height:1.85}.skillrow b{font-size:13px}
+.skill-dialog{border-radius:var(--radius-panel)}.skill-close{min-width:40px;min-height:40px}.skill-dialog-body>p{font-size:14px}.skill-modal-note{font-size:12px}.skill-done{font-size:12px;min-height:46px;border-radius:var(--radius-control)}.skill-stars small{font-size:10px}
+/* Contact remains part of the same archive. */
+.about-contact{max-width:1160px;gap:40px;margin:34px auto 48px}.contact-hub{border-radius:var(--radius-panel);padding:28px}.contact-intro>p{font-size:14px;line-height:1.85}.about-contact .eyebrow{font-size:10px}.contact-hub h3{font:400 29px/1.3 Georgia,serif}.contact-option{border-radius:var(--radius-control);padding:14px 16px;min-height:66px}.contact-option b{font-size:14px}.contact-option small{font-size:12px;line-height:1.5}.studio-note p{font-size:12px;line-height:1.8}
+@media(max-width:1050px) and (min-width:761px){.screenhead{gap:14px}.quicknav button{font-size:10px;padding:9px 10px}.profile-character-stage{height:650px}[data-screen=profil] .profilegrid{gap:24px;grid-template-columns:minmax(260px,.85fr) minmax(0,1.15fr)}.profiletext{padding:23px}.tree-branches{gap:24px}}
+@media(max-height:820px) and (min-width:761px){.menu .gametitle{font-size:70px;margin:12px 0 18px}.menu .title-menu{gap:12px;padding:12px 0 20px 6%}.menu .game-controls{min-height:155px}.menu-direct-actions{margin-top:20px}.menu .work-descriptor{font-size:10px}.menu #game-menu button{font-size:21px}}
+@media(max-width:760px){header{height:76px;padding:16px 5%;gap:10px}header .wordmark{gap:8px}header .wordmark .personal-monogram{width:32px;height:34px;font-size:18px;border-radius:7px}.personal-lockup b{font-size:12px}.personal-lockup small{font-size:6.5px;letter-spacing:1px}.settings{gap:5px}.settings>button{min-height:36px;min-width:32px;padding:8px}.settings .language-switch button{min-width:28px;min-height:28px}.settings .language-switch{padding:2px}.screenhead{gap:12px;padding-top:20px;padding-bottom:20px;flex-wrap:wrap}.screenhead h1{font-size:31px;flex-basis:100%;order:2;text-align:center;margin-top:5px}.screenhead .back{font-size:10px;min-height:40px}.quicknav{margin-left:auto;gap:4px}.quicknav button{font-size:9px;padding:8px;min-height:36px}.pagefoot{font-size:9px;letter-spacing:.5px;flex-wrap:wrap;gap:7px;padding:20px 0}.menu .title-lockup{padding-top:25px}.menu .gametitle{font-size:clamp(46px,13vw,66px);letter-spacing:-2px;line-height:.97;margin:15px 0}.menu .title-lockup .eyebrow{font-size:9px;letter-spacing:1.5px}.menu .work-descriptor{font-size:9px;letter-spacing:.4px;line-height:1.8;gap:4px 9px;max-width:340px}.menu-direct-actions{justify-content:center;gap:8px;margin-top:20px}.menu-direct-actions a{min-width:0;flex:1;max-width:170px;font-size:11px;padding:12px;min-height:44px}.menu .menu-character{width:225px;margin:7px 0 -8px}.menu .game-controls{min-height:140px;padding-bottom:18px}.menu #game-menu{gap:3px}.menu #game-menu button{font-size:20px;min-height:44px;padding:8px 14px 8px 22px}.menu #game-menu small{font-size:9px;letter-spacing:0;margin-top:12px}.menu .press-start{font-size:12px}.menu .press-start span{font-size:10px}.menu .menu-footer{font-size:8px;letter-spacing:.5px;padding:18px 0;gap:15px}[data-screen=profil] .profilegrid{gap:22px;margin:25px auto 34px}.profile-character-stage{height:450px;width:min(100%,350px);border-radius:var(--radius-panel)}.profile-stage-label{font-size:10px;top:24px}.profile-stage-caption span,.profile-stage-caption small{font-size:8px}.profile-stage-caption b{font-size:27px}.profiletext{padding:23px 20px;width:100%}.profiletext h2{font-size:38px;margin-top:20px}.profile-kicker .eyebrow{font-size:9px}.character-status{font-size:9px}.character-class{font-size:12px}.character-tabs{margin-top:20px;gap:3px}.character-tabs button{padding:12px 7px;font-size:12px;flex:1}.profiletext .character-bio{font-size:14px;line-height:1.85}.character-tabpanel{min-height:0}.profilefacts{gap:15px 18px}.profilefacts small{font-size:9px}.profilefacts p{font-size:12px}.skills-shortcut{padding:14px 12px}.skills-shortcut small{font-size:11px}.profile-actions{grid-template-columns:1fr 1fr}.profile-primary,.profile-secondary{font-size:12px;padding:13px 12px}.tree-intro{flex-direction:column;align-items:start;gap:8px}.tree-intro h2{font-size:30px}.tree-intro p{font-size:14px;margin-bottom:8px}.tree-badge{font-size:10px}.tree-disclaimer{font-size:12px}.tree-board{padding:24px 13px 28px}.tree-root{font-size:14px;padding:13px;gap:12px}.tree-root small{font-size:8px;letter-spacing:.4px}.tree-root>span{font-size:21px;width:39px;height:39px}.branch-title{padding:14px 16px}.branch-title h3{font-size:22px}.branch-title small{font-size:9px;top:43px}.branch-title>span{font-size:9px}.node-name{font-size:11px}.node-caption{font-size:8px;letter-spacing:.3px}.skill-node{padding:7px 0;gap:10px}.tree-legend{font-size:11px;gap:7px}.node-emblem{width:56px;height:56px}.node-emblem img{width:29px;height:29px}.journey-details>summary{font-size:13px}.journal{padding:22px}.about-contact{grid-template-columns:1fr;gap:26px;margin:25px auto 34px}.contact-intro h2{font-size:37px}.contact-hub{padding:23px 20px}.contact-option{padding:13px 12px}.contact-option small{font-size:11px}}
+@media(max-width:380px){.personal-lockup b{font-size:11px}.personal-lockup small{font-size:6px}.settings>button{padding:7px;min-width:29px}.settings .language-switch button{min-width:25px}.quicknav button{font-size:8px;padding:7px}.menu .menu-character{width:210px}.profiletext{padding:21px 18px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+.profile-figure{top:55px;height:calc(100% - 185px)}
+@media(max-width:760px){.profile-figure{top:46px;height:calc(100% - 150px)}}

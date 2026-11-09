@@ -1,0 +1,20 @@
+Official project identity assets collected from the public project websites, 2026-11-03.
+syanayya.svg — https://tbq-syanayya.my.id/images/logo.svg
+imajinatta.webp — https://imajinatta.my.id/images/logo-mark.png
+begonia.webp — https://homestaybegonia.netlify.app/assets/logo.png
+almisbah.webp — https://almisbahul-ulum-quran.netlify.app/assets/logo-yayasan.png
+insanlima.webp — https://insanlimamedika.netlify.app/assets/logo-insanlima.png
+bapak2.webp — https://bapak2rekomendasi.netlify.app/avatar.png (public brand avatar)
+mas-tools.webp — https://mas-tools.vercel.app/_next/image?url=%2Flogo.png&w=384&q=75
+kabarkelas.webp — https://kabarkelas.desainindongmas.my.id/assets/logo-mark.png
+arahjamaah.svg — https://arahjamaah.desainindongmas.my.id/brand.svg
+kabrtutor.webp — https://kabrtutor.desainindongmas.my.id/logo.png
+nginepin.webp — https://nginepin.desainindongmas.my.id/assets/logo.jpg
+lbhdp.webp — https://lbhdp.my.id/logo.png
+Raster assets resized for web delivery; empty outer padding trimmed without changing artwork or colors.
+
+User-supplied approved logos, 2026-11-03:
+DiengInep — Centered DiengInep emblem and wordmark.png
+AlkesCore — AlkesCore Logo with Dark Accent Square.png
+Enzy Snack — file_00000000d090820b85d7a5c2f5fde40e.png
+Transparent carousel derivatives use background extraction from the approved sources. Original assets retained for other page uses.

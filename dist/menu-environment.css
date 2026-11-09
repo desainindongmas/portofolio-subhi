@@ -1,0 +1,38 @@
+/* Shared stage: environment, contact shadow and transparent character remain separate. */
+body:has(.menu:not([hidden])){background:#101c2d}
+body:has(.menu:not([hidden])) header{background:#101c2d;border-color:#ffffff16;color:#f4eee2;max-width:none}
+body:has(.menu:not([hidden])) .wordmark{color:#f4eee2}
+body:has(.menu:not([hidden])) .settings button{background:#152737cc;color:#e6eae4;border-color:#ffffff25}
+.menu{--ink:#f5f0e7;--muted:#b9c8c8;--accent:#e5bc71;--line:#ffffff26;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:calc(100svh - 80px);padding:32px 0 70px;overflow:visible;color:var(--ink)}
+.menu-environment,.menu-shade{position:absolute;inset:0 -5.56%;pointer-events:none;z-index:-2;overflow:hidden}
+.menu-environment img{display:block;width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.menu-shade{z-index:-1;background:linear-gradient(90deg,#0612217a,transparent 65%),linear-gradient(0deg,#07132085,transparent 22%)}
+.menu .title-menu{grid-column:1;grid-row:1;display:flex;width:100%;max-width:620px;margin:0;padding:18px 0 24px 6%;gap:20px;min-height:0;justify-content:center;align-items:flex-start;z-index:2}
+.menu .gametitle{font-size:clamp(64px,7.1vw,104px);color:#f5f0e7;text-shadow:0 3px 25px #0003}
+.menu .gametitle span{color:#f5f0e7}.menu .title-lockup .eyebrow{color:#bfcdcc}
+.menu .subtitle{color:#c2d2cf}.menu .game-controls{width:100%;min-height:220px;align-self:auto;background:none;padding:0;margin:0}
+.menu #game-menu button{font-size:clamp(20px,2vw,27px);color:#c4ceca;min-height:44px}
+.menu #game-menu button:hover,.menu #game-menu button:focus{color:#fff2d5}.menu #game-menu button:focus-visible{outline:2px solid #e5bc71;border-radius:3px}
+.menu .menu-character{position:relative;grid-column:2;grid-row:1;justify-self:center;align-self:end;right:auto;bottom:auto;width:min(100%,480px);height:auto;aspect-ratio:2/3;max-height:calc(100svh - 155px);margin:0 0 16px;opacity:1;z-index:1;pointer-events:none}
+.menu .main-character{position:relative;display:block;width:100%;height:100%;object-fit:contain;z-index:1;max-width:none}
+.menu .character-grounding{position:absolute;left:32%;right:27%;bottom:8.8%;height:2.5%;border-radius:50%;background:#02080dd9;filter:blur(6px);transform:rotate(-2deg)}
+.menu .character-grounding:after{content:'';position:absolute;inset:-50% -25%;border-radius:50%;background:#030c1450;filter:blur(13px)}
+.menu .menu-footer{position:absolute;left:0;right:0;bottom:0;padding:22px 0;color:#b6c6c6;border-color:#ffffff20;z-index:3}
+@media(min-width:1600px){.menu .menu-character{width:500px;justify-self:start;margin-left:6%}.menu .title-menu{padding-left:12%}}
+@media(max-height:760px) and (min-width:761px){.menu{padding-top:12px;padding-bottom:55px}.menu .title-menu{gap:8px;padding-top:0;padding-bottom:0}.menu .gametitle{font-size:68px;margin:14px 0}.menu .game-controls{min-height:190px}.menu #game-menu button{font-size:21px;padding-top:4px;padding-bottom:4px}.menu .menu-character{max-height:calc(100svh - 135px);margin-bottom:6px}}
+@media(max-width:760px){
+.menu{display:flex;flex-direction:column;align-items:stretch;min-height:calc(100svh - 72px);padding:0 0 55px;overflow:visible}
+.menu-environment img{object-position:58% center}.menu-shade{background:linear-gradient(0deg,#071320f0 0%,#071320b3 25%,transparent 65%)}
+.menu .title-menu{display:contents}
+.menu .title-lockup{order:0;position:relative;z-index:2;padding:24px 4% 0;text-align:center;width:100%}
+.menu .title-lockup .eyebrow{justify-content:center;font-size:7px;letter-spacing:2px}
+.menu .gametitle{font-size:clamp(42px,11.5vw,60px);line-height:.92;letter-spacing:-2px;margin:14px 0 12px}
+.menu .subtitle{font-size:7px;letter-spacing:2px;margin-bottom:0}
+.menu .menu-character{order:1;flex:none;align-self:center;width:clamp(200px,61vw,275px);max-height:none;aspect-ratio:2/3;margin:-3px 0 -14px;right:auto;bottom:auto;height:auto;opacity:1}
+.menu .game-controls{order:2;position:relative;z-index:3;width:100%;min-height:210px;align-self:center;display:flex;justify-content:center;padding:0 4% 12px;margin:0;background:none;border-radius:0}
+.menu #game-menu{width:max-content;max-width:100%;align-items:stretch;gap:2px}.menu #game-menu button{font-size:21px;min-height:44px;padding:8px 16px 8px 24px;white-space:normal}.menu #game-menu button span{font-size:8px;width:24px}.menu #game-menu small{font-size:6px;letter-spacing:.5px;margin:12px 0 0 24px;text-align:left}
+.menu .press-start{font-size:12px;text-align:center;white-space:normal;line-height:1.8;letter-spacing:1px}.menu .press-start span{margin:9px 0 0;font-size:9px}.menu .press-start kbd{font-size:12px}
+.menu .menu-footer{padding:17px 0;font-size:6px;letter-spacing:.5px;gap:12px}.menu .menu-footer span:first-child{max-width:none}
+}
+@media(max-width:380px){.menu .title-lockup{padding-top:20px}.menu .menu-character{width:205px}.menu .gametitle{font-size:43px}.menu #game-menu button{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.menu .press-start{animation:none}}
