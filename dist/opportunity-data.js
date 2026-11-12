@@ -29,6 +29,58 @@ const cases={
   boundary:L('Demo dan target rilis tidak berarti seluruh fitur sudah siap produksi. Belum ada klaim adopsi sekolah atau hasil operasional.','A demo and release target do not establish production readiness for every feature. No school adoption or operational outcomes are claimed.'),
   inspect:L('Buka demo, mulai dari Ringkasan, lalu jelajahi pilihan peran serta menu nilai, rapor, dan pendampingan untuk memahami cakupan produk.','Open the demo, start from the overview, then explore the role options and grades, reports and support menus to understand the product scope.')
  },
+ 'project-14':{
+  role:L('Perencana produk · AI orchestration · desain alur','Product planner · AI orchestration · workflow design'),
+  status:L('Demo pelanggan · portal mitra masih dikerjakan','Customer demo · partner portal in progress'),
+  thesis:L('Memetakan kebutuhan perjalanan menjadi sistem operasional.','Turning travel needs into operational workflows.'),
+  intro:L('ArahJamaah dirancang untuk kebutuhan penyelenggara umrah dan haji, dengan alur pelanggan dan mitra yang berbeda.','ArahJamaah addresses Umrah and Hajj operators with distinct customer and partner journeys.'),
+  decisions:[
+   [L('Membedakan jenis organisasi','Separate organization types'),L('Perencanaan produk mempertimbangkan kebutuhan PPIU, PIHK, KBIHU dan mitra.','Product planning considers PPIU, PIHK, KBIHU and partner workflows.')],
+   [L('Memvalidasi lewat demo terlebih dahulu','Validate through a demo first'),L('Pengalaman pelanggan diprioritaskan untuk dieksplorasi; portal mitra tidak diklaim sudah dirilis.','The customer journey is explored first; the partner portal is not represented as released.')]
+  ],
+  deliverables:[L('Demo pelanggan tersedia untuk eksplorasi alur.','A customer demo is available to explore workflows.'),L('Blueprint dan pengembangan portal mitra masih berjalan.','Partner portal blueprint and development remain ongoing.')],
+  boundary:L('Tidak ada klaim adopsi oleh travel, transaksi, atau kesiapan produksi penuh.','No claims of travel-agency adoption, transactions or full production readiness.'),
+  inspect:L('Tinjau alur demo pelanggan dan perhatikan pemisahan kebutuhan pengguna; portal mitra belum diluncurkan.','Explore the customer demo and separation of user needs; the partner portal has not launched.')
+ },
+ 'project-16':{
+  role:L('Perencana produk · desain UX · AI-assisted builder','Product planner · UX designer · AI-assisted builder'),
+  status:L('Demo tersedia · bukan produk produksi','Demo available · not a production claim'),
+  thesis:L('Satu pengalaman booking untuk pemilik dan tamu.','A booking journey for owners and guests.'),
+  intro:L('Nginepin membantu pemilik penginapan merancang kanal pemesanan sendiri, sambil mempertimbangkan pengelolaan ketersediaan dan jalur OTA yang sudah ada.','Nginepin explores a direct booking channel for property owners while considering availability management and existing OTA channels.'),
+  decisions:[
+   [L('Membedakan kebutuhan tiap peran','Separate role-based needs'),L('Demo membedakan pengalaman Guest, Admin dan Owner.','The demo distinguishes Guest, Admin and Owner journeys.')],
+   [L('Menyiapkan opsi produk bertahap','Plan progressive product tiers'),L('Rancangan pengalaman mengeksplorasi Standard, Pro, dan Enterprise untuk kebutuhan penginapan berbeda.','The experience explores Standard, Pro and Enterprise for different property needs.')]
+  ],
+  deliverables:[L('Demo alur pemesanan dan pengelolaan peran.','A demo for booking and role-management journeys.')],
+  boundary:L('Demo bukan bukti sinkronisasi OTA produksi, tingkat hunian, penghematan komisi, atau transaksi riil.','A demo does not prove production OTA synchronization, occupancy, commission savings or real transactions.'),
+  inspect:L('Coba peralihan peran dan opsi paket untuk memahami keputusan UX.','Try role and tier switching to inspect the UX decisions.')
+ },
+ 'project-27':{
+  role:L('Perencana sistem operasional · AI-assisted builder','Operations planner · AI-assisted builder'),
+  status:L('Web app internal · akses perangkat terbatas','Internal web app · restricted device access'),
+  thesis:L('Pencatatan praktis untuk operasi distribusi snack.','Practical records for snack distribution.'),
+  intro:L('Enzy Snack membutuhkan pencatatan distribusi ke warung, penjualan, dan retur dalam alur yang mudah digunakan di perangkat seluler.','Enzy Snack needs accessible mobile workflows for retail distribution, sales and returns.'),
+  decisions:[
+   [L('Mengutamakan alur mobile','Prioritize mobile workflows'),L('Perancangan berangkat dari aktivitas tim lapangan dan pencatatan yang sesederhana mungkin.','The design starts from field-team activities and minimal-step recording.')],
+   [L('Memisahkan ringkasan publik dari aplikasi privat','Keep public summaries separate from private operations'),L('Portofolio hanya menampilkan tujuan dan cakupan pekerjaan tanpa data stok, pelanggan, atau catatan transaksi.','The portfolio shows goals and scope without inventory, customer or transaction records.')]
+  ],
+  deliverables:[L('Ringkasan desain dan cakupan web app internal.','A public summary of the internal web app scope and design.')],
+  boundary:L('Tidak membuka data operasional, akses privat, atau mengklaim hasil bisnis yang belum diukur.','No private records, restricted access or unmeasured business outcomes are disclosed.'),
+  inspect:L('Baca ringkasan proyek; penggunaan aplikasi memerlukan otorisasi perangkat.','Read the project overview; app use requires device authorization.')
+ },
+ 'project-28':{
+  role:L('Perencana produk · konsep demo · AI orchestration','Product planner · demo concept · AI orchestration'),
+  status:L('Demo interaktif · produksi menyusul','Interactive demo · production to follow'),
+  thesis:L('Dari alur restoran ke keputusan berbasis profit.','From restaurant workflows to profit-oriented decisions.'),
+  intro:L('Sajiva adalah konsep Restaurant Operations Management System with Profit Analytics, yang diawali demo interaktif berbasis data contoh.','Sajiva is a Restaurant Operations Management System with Profit Analytics concept, starting with an interactive sample-data demo.'),
+  decisions:[
+   [L('Memvalidasi sebelum membangun penuh','Validate before full implementation'),L('Pengalaman demo dipakai untuk memperoleh masukan pengguna restoran sebelum blueprint produksi dikunci.','The demo gathers restaurant feedback before locking the production blueprint.')],
+   [L('Menjaga fokus pada keputusan operasional','Focus on operational decisions'),L('Analitik profit dijadikan bagian dari narasi produk, bukan sekadar dashboard angka.','Profit analytics informs the product narrative rather than being just another numeric dashboard.')]
+  ],
+  deliverables:[L('Demo interaktif berbasis data contoh untuk eksplorasi konsep.','An interactive sample-data demo to explore the concept.')],
+  boundary:L('Angka dalam demo bukan kinerja restoran sungguhan; kesiapan produksi dan pengguna komersial belum diklaim.','Demo numbers are not real restaurant results; production readiness and commercial adoption are not claimed.'),
+  inspect:L('Jelajahi demo untuk memahami alur operasional dan perspektif profit.','Explore the demo to inspect operations and the profitability perspective.')
+ },
  'project-26':{
   role:L('Website & panel admin · brand · manajemen konten','Website & admin panel · brand · content management'),
   status:L('Penugasan berjalan · Oktober 2026–Maret 2027','Ongoing engagement · October 2026–March 2027'),
