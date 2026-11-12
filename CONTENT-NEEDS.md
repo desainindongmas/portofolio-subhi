@@ -11,8 +11,8 @@ team experience, production-readiness guarantees, or availability dates are infe
    and handover example suitable for sharing. Newly written frameworks are proposals,
    not retrospective evidence of completed practices.
 5. KabarKelas: current release status and a dated description of demo versus production features.
-7. Updated bilingual CV PDFs: run scripts/build-cv.py, review generated PDFs, and replace the older downloads before publishing. The current PDFs predate the 12 November 2026 career update.
 6. Teamwork: a real example of coordination, approvals, feedback or handover.
+7. Bilingual CV PDFs were regenerated on 12 November 2026; review their layout and project facts in the Cloudflare branch preview before merging.
 
 Enzy Snack may appear only as a public project overview, as approved in November 2026.
 Do not disclose client records, inventory, transactions, private app access or credentials.
