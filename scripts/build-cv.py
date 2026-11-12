@@ -32,19 +32,32 @@ for en in [False,True]:
  def add(t,k='body'):flow.append(P(t,k))
  def choose(a,b):return b if en else a
  add('Muhammad Subhi','name')
- add('Web Designer | App Builder | Social Media Content Manager | AI Specialist','role')
+ add(escape(d['profile']['headline']),'role')
  add('Bogor, Indonesia | +62 859 5283 9393 | muhammadsubhi@desainindongmas.my.id<br/>'
      '<link href="https://desainindongmas.my.id">desainindongmas.my.id</link> | '
      '<link href="https://www.linkedin.com/in/muhammad-subhi-7b8b7a111/">LinkedIn: Muhammad Subhi</link>','contact')
  add(choose('PROFIL','PROFILE'),'heading')
- add(choose('Membantu bisnis dan lembaga membangun kehadiran digital yang terhubung: identitas brand, website, aplikasi internal, dan konten media sosial. Mengelola desainindongmas sejak November 2024, dengan pengerjaan mandiri dari perencanaan hingga publikasi dan pengembangan berbantuan AI.','Helping businesses and institutions build a connected digital presence through brand identity, websites, internal applications and social media content. Operating desainindongmas since November 2024, independently handling work from planning through publication with AI-assisted development.'))
+ add(escape(choose(d['profile']['bio'],"I combine marketing, team leadership, business strategy, design and technology to build digital solutions. Through desainindongmas, I plan branding, websites, apps and content from requirements to publication. I direct AI to accelerate delivery while retaining strategy, review and quality control.")))
  add(choose('PENGALAMAN','EXPERIENCE'),'heading')
- roles=[
- ('desainindongmas',choose('Founder / Pengelola','Founder / Operator'),choose('November 2024 - sekarang','November 2024 - present'),choose('Desain website, pengembangan aplikasi berbantuan AI, serta manajemen konten dari perencanaan hingga publikasi.','Website design, AI-assisted application development and content management from planning through publication.')),
- ('Prudential Syariah','Lead Marketing &amp; Business Development',choose('April 2015 - sekarang','April 2015 - present'),''),
- ('Niaga Mandiri Pratama','Accounting','2018 - 2019',''),
- ('Bimbel Salemba Group','Marketing','2012 - 2013',''),
- ('Bimbel Salemba Group',choose('Tenaga Pengajar','Tutor'),'2010 - 2013','')]
+ month_names={False:['','Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'],True:['','January','February','March','April','May','June','July','August','September','October','November','December']}
+ def date_label(value):
+  if not value:return ''
+  parts=value.split('-')
+  if len(parts)==1:return parts[0]
+  return month_names[en][int(parts[1])]+' '+parts[0]
+ en_roles={'Founder / Pengelola':'Founder / Operator','Associate Agency Director (AAD) · Sales & Team Leadership':'Associate Agency Director (AAD) · Sales & Team Leadership','Associate Agency Manager (AAM) / Junior Leader':'Associate Agency Manager (AAM) / Junior Leader','Agent / Marketing':'Insurance Sales Agent / Marketing','Tenaga Pengajar':'Tutor'}
+ en_scope={
+  'desainindongmas':'Brand strategy, websites, AI-assisted business applications, and social content from requirements and design through testing and publication.',
+  'Associate Agency Director (AAD) · Sales & Team Leadership':'Leading and coaching the sales team, supporting qualified lead development, offers, closing, client relationships, and personal sales activities.',
+  'Associate Agency Manager (AAM) / Junior Leader':'Developing and supporting agents while handling prospects, clients and personal sales production.',
+  'Agent / Marketing':'Prospecting, marketing, understanding client needs, and building customer relationships.'
+ }
+ roles=[]
+ for e in d['experience']:
+  role=en_roles.get(e['role'],e['role']) if en else e['role']
+  period=date_label(e['from'])+' - '+(choose('sekarang','present') if e.get('current') else date_label(e.get('to','')))
+  scope=en_scope.get(e['role'],en_scope.get(e['company'],e.get('scope',''))) if en else e.get('scope','')
+  roles.append((escape(e['company']),escape(role),escape(period),escape(scope)))
  for company,role,period,scope in roles:
   items=[P(company+' | '+role,'title'),P(period,'small')]
   if scope:items.append(P(scope))
@@ -63,7 +76,7 @@ for en in [False,True]:
  add(choose('UIN Syarif Hidayatullah | S1 Perbankan Syariah | Lulus 2018','UIN Syarif Hidayatullah | Bachelor’s degree, Islamic Banking | Graduated 2018'))
  add(choose('Pelatihan terkait: Digital Marketing (RevoU), Social Media Management, Optimasi Instagram dengan Insight, Produksi Konten Media Sosial dengan AI, serta Konsep Pemrograman (Digital Talent Scholarship / Komdigi). Daftar lengkap tersedia di portofolio.','Relevant training: Digital Marketing (RevoU), Social Media Management, Instagram Insights Optimization, AI-assisted Social Media Content Production, and Programming Concepts (Digital Talent Scholarship / Komdigi). Full training list available in the portfolio.'),'small')
  def footer(canvas,doc):
-  canvas.setFont('CV',7);canvas.setFillColor(muted);canvas.drawString(42,25,choose('CV ringkas | Diperbarui 7 November 2026','Concise CV | Updated 7 November 2026'));canvas.drawRightString(553,25,str(doc.page))
+  canvas.setFont('CV',7);canvas.setFillColor(muted);canvas.drawString(42,25,choose('CV ringkas | Diperbarui 12 November 2026','Concise CV | Updated 12 November 2026'));canvas.drawRightString(553,25,str(doc.page))
  doc=SimpleDocTemplate(str(out),pagesize=(595.28,841.89),rightMargin=42,leftMargin=42,topMargin=31,bottomMargin=38,title='Muhammad Subhi - Professional CV',author='Muhammad Subhi')
  doc.build(flow,onFirstPage=footer,onLaterPages=footer)
  print(out)
