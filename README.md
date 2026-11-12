@@ -16,6 +16,7 @@ Branch `content/career-skills-refresh-2026-11-12` memperbarui riwayat karier, po
 ## Pemeriksaan
 - Verifikasi syntax file JavaScript, validitas JSON portofolio, referensi aset, dan tautan navigasi.
 - Uji profil, timeline, skill tree, filter portfolio, case studies, contact CTA, dan toggle bahasa pada desktop/mobile setelah deploy preview.
-- `python scripts/build-cv.py` untuk meregenerasi PDF CV **setelah review isi**. PDF lama dalam `dist/downloads` belum otomatis berubah karena pembaruan skrip GitHub.
+- PDF CV bahasa Indonesia dan Inggris telah diregenerasi dan di-commit ke `dist/downloads/` pada 12 November 2026 melalui GitHub Actions.
+- Workflow `.github/workflows/build-cv.yml` akan membangun ulang kedua PDF ketika data portofolio atau skrip pembangunnya diperbarui; periksa kembali isi PDF sebelum merge.
 
 Jangan langsung merge ke `main` sebelum preview dan regenerasi CV diperiksa.
