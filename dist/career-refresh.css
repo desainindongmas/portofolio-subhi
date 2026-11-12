@@ -1,0 +1,17 @@
+/* Career + skills content enhancement: follows existing design tokens. */
+.core-abilities,.productivity-proof{margin:26px 0 34px}
+.capability-heading{margin:0 0 20px}.capability-heading h2{font:normal clamp(23px,2.6vw,34px)/1.16 Georgia,serif;letter-spacing:-.7px;margin:8px 0 10px}.capability-heading p{color:var(--muted);font-size:13px;line-height:1.7;margin:0;max-width:680px}
+.capabilities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.capability-card{min-width:0;border:1px solid var(--line);background:var(--panel);padding:21px;border-radius:8px}
+.capability-card h3{font-size:14px;font-weight:600;line-height:1.45;margin:0 0 10px}
+.capability-card p{color:var(--muted);font-size:12px;line-height:1.8;margin:0 0 17px}
+.capability-card small{display:block;color:var(--accent);font-size:10px;line-height:1.6}
+.productivity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.productivity-card{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:22px}
+.productivity-card>div{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}.productivity-card strong{font:normal 40px/1 Georgia,serif;color:var(--accent)}.productivity-card>div small{font-size:11px;color:var(--muted)}
+.productivity-card h3{font-size:14px;margin:0 0 10px;font-weight:600}.productivity-card p{font-size:11px;color:var(--muted);line-height:1.75;margin:0}
+.productivity-proof .rpg-disclaimer{margin:14px 0 0}
+.character-proof{border-top:1px solid var(--line);margin-top:19px;padding-top:16px}.character-proof h3{font-size:11px;font-weight:600;margin:0 0 12px}.character-proof-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.character-proof-grid>div{border:1px solid var(--line);border-radius:6px;padding:12px;background:var(--panel)}.character-proof-grid strong{font:normal 23px/1.2 Georgia,serif;color:var(--accent)}.character-proof-grid span{font-size:9px;line-height:1.6;color:var(--muted);display:block;margin-top:5px}
+@media(max-width:920px){.capabilities-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.capabilities-grid,.productivity-grid{grid-template-columns:1fr}.capability-card,.productivity-card{padding:18px}}
