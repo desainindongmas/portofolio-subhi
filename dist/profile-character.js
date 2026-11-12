@@ -12,6 +12,12 @@
  function select(index){nodes.forEach((n,i)=>{n.button.setAttribute('aria-selected',String(i===index));n.button.tabIndex=i===index?0:-1;n.panel.hidden=i!==index});root.closest('[data-screen]').dataset.characterTab=String(index)}
  tabs.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const current=nodes.findIndex(n=>n.button===document.activeElement);const next=e.key==='Home'?0:e.key==='End'?2:(current+(e.key==='ArrowRight'?1:2))%3;select(next);nodes[next].button.focus()});
  bio.before(tabs,panels);nodes[0].panel.append(bio,facts);
+ const workProof=document.createElement('section');workProof.className='character-proof';nodes[0].panel.append(workProof);
+ function drawWorkProof(){
+  const en=document.documentElement.lang==='en',items=portfolioData.productivityEvidence||[];
+  workProof.innerHTML='<h3>'+(en?'SELECTED WORK EXAMPLES':'CONTOH HASIL KERJA')+'</h3><div class="character-proof-grid">'+items.map(item=>'<div><strong>'+item.value+'</strong><span>'+(en?item.enTitle:item.title)+'</span></div>').join('')+'</div>';
+ }
+ window.addEventListener('languagechange',drawWorkProof);drawWorkProof();
  const add=(parent,tag,text)=>{const el=document.createElement(tag);el.textContent=text;parent.append(el);return el};
  if(!portfolioData.experience.length){add(nodes[1].panel,'h3','Pengalaman berkarya');add(nodes[1].panel,'p','Riwayat pengalaman kerja akan dilengkapi. Jelajahi Portfolio untuk melihat karya yang sudah ditampilkan.');const link=add(nodes[1].panel,'button','Lihat Portfolio →');link.className='inlineaction';link.dataset.go='portofolio'}
  else portfolioData.experience.forEach(e=>{add(nodes[1].panel,'h3',e.role||e.title||e.company||'Pengalaman');add(nodes[1].panel,'p',e.description||e.company||'')});

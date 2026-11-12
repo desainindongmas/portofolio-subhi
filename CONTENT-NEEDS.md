@@ -12,9 +12,11 @@ team experience, production-readiness guarantees, or availability dates are infe
    not retrospective evidence of completed practices.
 5. KabarKelas: current release status and a dated description of demo versus production features.
 6. Teamwork: a real example of coordination, approvals, feedback or handover.
+7. Bilingual CV PDFs were regenerated on 12 November 2026; review their layout and project facts in the Cloudflare branch preview before merging.
 
-Private client projects remain excluded. Do not add Enzy Snack, personal-finance
-or DDM internal project records to a public collection.
+Enzy Snack may appear only as a public project overview, as approved in November 2026.
+Do not disclose client records, inventory, transactions, private app access or credentials.
+Personal-finance and DDM internal project records remain excluded.
 
 The live Site's audience remains owner-private. This update does not authorize
 public access or change sharing settings. Confirm the intended audience before

@@ -149,7 +149,7 @@ Pengguna menyatakan kontribusi proyek dikerjakan sendiri secara end-to-end, dari
 | DiengInep | Produk pribadi; gunakan ejaan resmi ini |
 | AlkesCore | Produk pribadi; masih dibangun menurut konteks terakhir |
 | LBH Dakwah & Pendidikan | Proyek klien yang dapat ditampilkan sesuai sumber |
-| Enzy Snack | Proyek klien; **tidak boleh tampil di portofolio publik** |
+| Enzy Snack | Proyek klien; **ringkasan publik diizinkan per keputusan 10 November 2026**, tetapi data operasional, akses perangkat, dan catatan transaksi tetap privat |
 | Personal finance / tracker keuangan dan utang pribadi | **Tidak ditampilkan publik** |
 | DDM project / project tracker | **Tidak ditampilkan publik** |
 
@@ -247,3 +247,13 @@ Catatan pembaruan berikutnya: isi hanya setelah diverifikasi.
 - URL deployment aktif: belum diperiksa.
 - Status domain khusus: belum diperiksa.
 - Tugas selanjutnya: pulihkan/periksa sumber terakhir, lalu lanjutkan upload GitHub.
+
+
+## Addendum konten — 12 November 2026
+
+- Karier Prudential Syariah: Agent/Marketing sejak April 2015; AAM/Junior Leader sejak 2019; AAD sejak 2022 hingga kini. Peran sales pribadi dan leadership dijelaskan terpisah.
+- Skills: AI orchestration, prompting, perancangan solusi, AI-assisted web/app delivery, content production, leadership, dan QC. Rating tetap penilaian pribadi (5/4/4/5/4); tidak diklaim sebagai gelar full-stack engineer.
+- Bukti produktivitas: empat demo SaaS dalam sekitar satu minggu; 5 single feed + 4 carousel (masing-masing 6–8 slide) + 9 story dalam 6 jam. Durasi berdasarkan laporan pribadi, bukan standar industri atau klaim dampak.
+- Portofolio: tambah Sajiva (demo interaktif) dan Enzy Snack (ringkasan publik saja); DiengInep dan AlkesCore masih dalam pengembangan, jangan tampilkan tautan live tanpa verifikasi.
+- Sumber UI aktif berada pada `dist/`; pembaruan dikerjakan di branch `content/career-skills-refresh-2026-11-12` untuk PR, bukan perubahan otomatis pada website live.
+- PDF CV hasil build lama masih perlu regenerasi setelah perubahan data. Jangan menggambarkan binary PDF lama sebagai sudah diperbarui.
